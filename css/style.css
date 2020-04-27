@@ -100,7 +100,9 @@ body{
     background: #fff;
     color: #648880;
 }
-
+/* 
+==============Navigation Bar==============
+*/
 .navbar{
     top: 15px;
     display: block;
@@ -146,4 +148,24 @@ h1, h2, h3, h4 {
 }
 .header a:hover{
     color: #648880;
+}
+h2{
+    line-height: 44px;
+}
+
+
+/* ==============container========== */
+
+.container{
+        color: white;
+        line-height: 44px;
+        padding: 150px 0px 0px 0px;
+        text-align: center;
+}
+.container h2{
+    font-size: 28px;
+}
+.container p{
+    font-size: 20px;
+
 }
