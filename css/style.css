@@ -54,7 +54,7 @@ body{
 }
 
 .logo {
-    border-top: 4px solid #648880;
+    border-top: 2px solid #648880;
     float: left;
     font-size: 48px;
     font-weight: 100;
@@ -66,7 +66,7 @@ body{
 
 .mid{
     display: block; 
-    width: 60%;
+    /* width: 60%; */
     margin: 15px auto;
 }
 .right{
@@ -102,14 +102,12 @@ body{
 /* 
 ==============Navigation Bar==============
 */
-.navbar{
-    top: 15px;
-    display: block;
-}
 .navbar li{
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 24px;
-    display: inline;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top:;
 }
 .navbar li a {
     background: #395870;
@@ -118,6 +116,7 @@ body{
     color: #fff;
     padding: 12px 20px;
     text-decoration: none;
+    
 }
 .navbar li a:hover{
     background: #314b60;
@@ -175,3 +174,27 @@ h2{
     padding-left: 30px;
     padding-right: 30px;
 } */
+
+
+/* Float */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* Clear fix */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
