@@ -52,6 +52,9 @@ body{
     font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
+* {
+    box-sizing: border-box;
+  }
 
 .logo {
     border-top: 2px solid #648880;
@@ -62,6 +65,7 @@ body{
     line-height: 44px;
     padding: 40px 0 22px 0;
     text-transform: uppercase;
+    
 }
 
 .mid{
@@ -107,7 +111,7 @@ body{
     font-size: 24px;
     display: inline-block;
     margin: 0 auto;
-    margin-top:;
+    /* margin-top: 50px; */
 }
 .navbar li a {
     background: #395870;
@@ -140,6 +144,8 @@ h1, h2, h3, h4 {
 .header a{
     margin-top: 200px;
     color: white;
+    
+    
 }
 .footer a{
     color: white;
@@ -150,6 +156,7 @@ h1, h2, h3, h4 {
 h2{
     line-height: 44px;
 }
+
 
 
 /* ==============container========== */
