@@ -175,26 +175,3 @@ h2{
     padding-right: 30px;
 } */
 
-
-/* Float */
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-/* Clear fix */
-
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.group {
-  clear: both;
-  *zoom: 1;
-}
