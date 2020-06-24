@@ -52,18 +52,18 @@ body{
     font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
-* {
+/* * {
     box-sizing: border-box;
-  }
+  } */
 
 
 .logo {
     border-top: 2px solid #648880; 
-    float: left;
+    /* float: left; */
     font-size: 40px;
     font-weight: 100;
     line-height: 44px;
-    padding: 40px 0 22px 0;
+    padding: 30px 0 22px 0;
     text-transform: uppercase;
     
 }
@@ -90,22 +90,68 @@ body{
     margin: 0;
     text-transform: uppercase;
 }
-.alt-button{
+.btn{
     border: 1px solid #fff;
     padding: 10px 30px;
 }
-.alt-button:hover{
+.btn:hover{
     background: #fff;
     color: #648880;
+}
+.popup {
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-content{
+    height: 250px;
+    width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #314b60; 
+    
+}
+.close {
+    max-width: 6%;
+    height: auto;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+}
+.popup-content input{
+    margin: 20px auto;
+    display: block;
+    width: 40%;
+    padding: 8px;
+    border: 1px solid black ;
+    
 }
 /* 
 ==============Navigation Bar==============
 */
+.navigat{
+   text-align: center;
+}
+.nav ul{
+    
+    display: inline-block;
+}
 .navbar li{
+    align-items: center;
     text-transform: capitalize;
     font-size: 24px;
     display: inline-block;
     margin: 0 auto;
+    
     
     /* margin-top: 50px;  */
     
@@ -164,7 +210,7 @@ h2{
 .container{
         color: white;
         line-height: 44px;
-        padding: 150px 0px 0px 0px;
+        padding: 80px 0px 0px 0px;
         text-align: center;
 }
 .container h2{

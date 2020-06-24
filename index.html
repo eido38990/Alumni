@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buitems Alumni Portal System</title>
-   <!-- <link rel="icon" type="image/png" href="/img/babab.png">-->
+   <link rel="icon" type="image/png" href="/img/babab.png">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+    <script src="/js/login.js"></script>
+    
 </head>
-
 
 <body>
 
@@ -20,24 +21,49 @@
             <a href="index.html">BUitms <br> alumni portal  </a>
         </h1>
         <!-- center for navBar -->
-        <nav class="mid">
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li><!--
-                --><li><a href="aboutus.html">About Us</a></li><!--
-                --><li><a href="alumniDirectory.html">Alumni Directory</a></li><!--
-                --><li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
+        <div class ="navigat">
+            <nav class="mid">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="aboutus.html">About Us</a></li><!--
+                    --><li><a href="alumniDirectory.html">Alumni Directory</a></li><!--
+                    --><li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+        
         <!-- right for Buttons -->
         <div class="right">
-            <button class="btn alt-button">
+            <a href="#" class="btn">Sign up</a>
+            <!-- <button class="btn">
                 Sign up
-            </button>
-            <button class="btn alt-button">
+            </button> -->
+            
+            <a href="#" class="btn" id="btn" >Sign in</a>
+            <!-- <button  class="btn">
                 Sign in
-            </button>
+            </button> -->
         </div>
+        
     </header>
+    <div class="popup">
+        <div class="popup-content">
+            <img src="/img/close.png" alt="" class="close">
+            <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" alt="user">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <a href="#" class="btn">Sign in</a>
+            <!-- <button class="btn">Sign in</button>       -->
+        </div>
+    </div>
+    <script >
+                
+        document.getElementById("btn").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "flex";
+        })
+                    </script>
+
+    
     <section class="container">
         <h2>
             Dedicated to provide a bridge between the alumni and their institute.
