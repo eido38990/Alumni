@@ -24,44 +24,78 @@
         <div class ="navigat">
             <nav class="mid">
                 <ul class="navbar">
-                    <li><a href="index.html">Home</a></li><!--
-                    --><li><a href="aboutus.html">About Us</a></li><!--
-                    --><li><a href="alumniDirectory.html">Alumni Directory</a></li><!--
-                    --><li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="alumniDirectory.html">Alumni Directory</a></li>
+                        <ul class="drop1">
+                            <li><a href="#">Latest Alumni Profile</a></li>
+                            <li><a href="#">Search Alumni Profile</a></li>
+                        </ul>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="#">Alumni Directory</a></li>
+                    <li><a href="#">Messages</a></li>
                 </ul>
             </nav>
         </div>
         
         <!-- right for Buttons -->
         <div class="right">
-            <a href="#" class="btn">Sign up</a>
+            <a href="#" class="btn" id="singup">Sign up</a>
             <!-- <button class="btn">
                 Sign up
             </button> -->
             
-            <a href="#" class="btn" id="btn" >Sign in</a>
+            <a href="#" class="btn" id="login" >Sign in</a>
             <!-- <button  class="btn">
                 Sign in
             </button> -->
         </div>
         
     </header>
+    <!-- login button code -->
     <div class="popup">
         <div class="popup-content">
-            <img src="/img/close.png" alt="" class="close">
+            <img src="/img/close.png" alt="" class="close" id="btn-close">
             <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" alt="user">
             <input type="text" placeholder="Username">
             <input type="password" placeholder="Password">
             <a href="#" class="btn">Sign in</a>
+            <!-- <button class="btn">Sign in</button>  -->
+        </div>
+    </div>
+    <!-- sign up button code -->
+    <div class="popup2">
+        <div class="popup-content2">
+            <img src="/img/close.png" alt="" class="close" id="btn-close2">
+            <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" alt="user">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Email Address">
+            <input type="text" placeholder="CMS ID">
+            <input type="tel" placeholder="Phone Number">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="re-write Password">
+            <a href="#" class="btn">Sign up</a>
             <!-- <button class="btn">Sign in</button>       -->
         </div>
     </div>
+    <!-- script of the login button -->
     <script >
                 
-        document.getElementById("btn").addEventListener("click", function(){
+        document.getElementById("login").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "flex";
         })
-                    </script>
+        document.getElementById("btn-close").addEventListener("click",function(){
+            document.querySelector(".popup").style.display="none";
+        })
+        document.getElementById("singup").addEventListener("click",function(){
+            document.querySelector(".popup2").style.display="flex";
+        })
+        document.getElementById("btn-close2").addEventListener("click",function(){
+            document.querySelector(".popup2").style.display="none";
+        })
+
+        
+    </script>
 
     
     <section class="container">
