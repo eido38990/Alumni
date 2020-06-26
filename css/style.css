@@ -52,9 +52,9 @@ body{
     font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
-/* * {
+* {
     box-sizing: border-box;
-  } */
+  }
 
 
 .logo {
@@ -166,24 +166,29 @@ body{
     right: -15px;
     cursor: pointer;
 }
+/* ============================Drop Down Menu========================== */
+ .sub-menu{
+    display: none;
+} 
 
-/* 
+
+/*
 ==============Navigation Bar==============
 */
 .navigat{
    text-align: center;
 }
-.nav ul{
-    
-    display: inline-block;
-}
+nav ul{
+    display: inline-flex;
+    list-style: none;
+} 
+
 .navbar li{
     align-items: center;
     text-transform: capitalize;
     font-size: 24px;
-    display: inline-block;
-    margin: 0 auto;
     /* margin-top: 50px;  */
+    
 }
 .navbar li a {
     display: block;   
@@ -193,12 +198,23 @@ body{
     /* background: linear-gradient(#49708f, #293f50); */
     border-right: 1px solid rgba(0, 0, 0, .3);
     padding: 12px 20px;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
-.navbar li a:hover{
+
+
+/* .mid ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -15px;
+} */
+ .navigat ul li :hover{
     background: #314b60;
+    color: #648880;
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+.navigat ul li:hover .sub-menu {
+    display: inline-block;
 }
 .navbar li:first-child a {
     border-radius: 4px 0 0 4px;
@@ -207,6 +223,8 @@ body{
     border-right: 0;
     border-radius: 0 4px 4px 0;
 }
+
+
 
 
 
@@ -224,7 +242,7 @@ h1, h2, h3, h4 {
 .footer a{
     color: white;
 }
-.header a:hover{
+.header .logo a:hover{
     color: #648880;
 }
 h2{
