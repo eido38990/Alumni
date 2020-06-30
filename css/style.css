@@ -20,12 +20,15 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+
+
+ article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
+} 
+ body {
 	line-height: 1;
 }
 ol, ul {
@@ -42,7 +45,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0; 
-}
+} 
 /* ==============Css reseter============ */
 
 
@@ -58,15 +61,15 @@ body{
 
 
 .logo {
-    border-top: 2px solid #648880; 
-    /* float: left; */
+    float: left;
+    border-top: 4px solid #648880; 
     font-size: 40px;
     font-weight: 100;
     line-height: 44px;
     padding: 30px 0 22px 0;
     text-transform: uppercase;
-    
 }
+
 
 .right{
     position: absolute;
@@ -168,13 +171,15 @@ body{
 }
 /* ============================Drop Down Menu========================== */
  .sub-menu{
-    display: none;
+     position: absolute;
+     left: -999em;
+     margin-left: 20px;
 
 } 
 .sub-menu ul{
-
+    position: relative;
     display: block;
-    z-index: -1;
+    z-index: 1;
 }
 .sub-menu ul li a{
     /* width: 95%; */
@@ -183,9 +188,41 @@ body{
 
 /* ======================SlideShow================== */
 
-.slider-show{
-    width: 700px;
-    height: 400px;
+.mySlides{
+    display: none;
+}
+
+.slide-content .child-Btn .display-right{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+}
+.slide-content .child-Btn .display-left{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+.slide-section{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.slide-content img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* .slider-show{
+    position: fixed;
+    box-sizing: border-box;
+    width: 90%;
+    height: 300px;
+    margin: 70px auto;
     overflow: hidden;
 }
 .slide-mid{
@@ -200,6 +237,9 @@ body{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+}
+ img{
+    z-index: -99;
 }
 .bar{
     width: 60px;
@@ -240,16 +280,18 @@ input[name="r"]{
 }
 #r4:checked ~ .s1{
     margin-left: -60%;
-}
+} */
 
 
 /*
 ==============Navigation Bar==============
 */
 .navigat{
-   text-align: center;
+    clear: left;
+    text-align: center;
 }
 nav ul{
+    
     display: inline-flex;
     list-style: none;
 } 
@@ -273,20 +315,14 @@ nav ul{
 }
 
 
-/* .mid ul li:hover .sub-menu{
-    display: block;
-    position: absolute;
-    margin-top: 15px;
-    margin-left: -15px;
-} */
+
  .navigat ul li :hover{
     background: #314b60;
     color: #648880;
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 }
 .navigat ul li:hover .sub-menu {
-    display: inline-block;
-    z-index: -1;
+    left: auto;
 }
 .navbar li:first-child a {
     border-radius: 4px 0 0 4px;
@@ -307,7 +343,6 @@ h1, h2, h3, h4 {
     color: #648880;
   }
 .header a{
-
     color: white;
     text-decoration: none;
 }
@@ -327,10 +362,12 @@ h2{
 /* ==============container========== */
 
 .container{
-        color: white;
-        line-height: 44px;
-        padding: 80px 0px 0px 0px;
-        text-align: center;
+    color: white;
+    line-height: 44px;
+    padding: 80px 0px 0px 0px;
+    width: 750px;
+    text-align:center;
+
 }
 .container h2{
     font-size: 28px;
@@ -338,17 +375,18 @@ h2{
 .container p{
     font-size: 20px;
 }
-.container{
-    margin: 0 auto;
-    width: 750px;
-}
+
 /* .container{
     padding-left: 30px;
     padding-right: 30px;
 } */
 
 footer{
+    position: fixed;
+    display: block;
+    bottom: 0px;
     color: white;
+    width: 100%;
 }
 footer a{
     border: 1px solid #fff;
@@ -357,4 +395,34 @@ footer a{
 footer a:hover{
     background: #314b60;
     color: white;
+}
+
+/* ===================== social links============= */
+.social-link{
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    top: 50%;
+    margin-left: 1050px;
+}
+.social-btn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #2980b9;
+    overflow: hidden;
+    position: relative;
+}
+.social-btn i{
+    line-height: 50px;
+    font-size: 23px;
+    margin-left: 14px;
+    transition: 0.2s linear;
+}
+.social-btn i:hover{
+    transform: scale(1.3);
 }

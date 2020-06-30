@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
     <script src="/js/login.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     
 </head>
 
@@ -18,7 +19,7 @@
     <header class="header">
         <!-- left for logo -->
         <h1 class="logo">
-            <a href="index.html">BUitms <br> alumni portal  </a>
+            <a href="index.html" id="log">BUitms <br> alumni portal  </a>
         </h1>
         <!-- center for navBar -->
         <div class ="navigat">
@@ -39,38 +40,41 @@
                 </ul>
             </nav>
         </div>
+
         <!-- ==========================SlideShow++++++++++++++++++++++ -->
-        <div class="slider-show slide-mid" style="margin-top: 409px;">
-            <div class="slides">
-                <input type="radio" name="r" id="r1" checked>
-                <input type="radio" name="r" id="r2">
-                <input type="radio" name="r" id="r3">
-                <input type="radio" name="r" id="r4">
-                <div class="slide s1">
-                    <img src="/img/slideshow/1.jpg" alt="">
+        <!-- <section class="slide1">
+            <div class="slider-show slide-mid">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1">
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <div class="slide s1">
+                        <img src="/img/slideshow/1.jpg" alt="">
+                    </div>
+                    <div class="slide " >
+                        <img src="/img/slideshow/2.jpg" alt="">
+                    </div>
+                    <div class="slide " >
+                        <img src="/img/slideshow/3.jpg" alt="">
+                    </div>
+                    <div class="slide ">
+                        <img src="/img/slideshow/4.jpg" alt="">
+                    </div>
+                    
                 </div>
-                <div class="slide " >
-                    <img src="/img/slideshow/2.jpg" alt="">
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
                 </div>
-                <div class="slide " >
-                    <img src="/img/slideshow/3.jpg" alt="">
-                </div>
-                <div class="slide ">
-                    <img src="/img/slideshow/4.jpg" alt="">
-                </div>
+                    
+               
             </div>
-            <div class="navigation">
-                <label for="r1" class="bar"></label>
-                <label for="r2" class="bar"></label>
-                <label for="r3" class="bar"></label>
-                <label for="r4" class="bar"></label>
-            </div>
-                
-           
-        </div>
-        
-
-
+            
+        </section> -->
+            
 
         <!-- right for Buttons -->
         <div class="right">
@@ -86,6 +90,40 @@
         </div>
         
     </header>
+    <!-- =============================Slideshow V2=========================== -->
+    <div class="slide-content slide-section" style="width: 800px; height: 350px; position: absolute;">
+        <img class="mySlides" src="/img/slideshow/1.jpg" alt="img1" >
+        <img class="mySlides" src="/img/slideshow/2.jpg" alt="img2">
+        <img class="mySlides" src="/img/slideshow/3.jpg" alt="img3" >
+        <img class="mySlides" src="/img/slideshow/4.jpg" alt="img4" >
+        <div class="child-Btn">
+            <button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="button display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+    </div>
+
+<!-- ====================Script============ -->
+<script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+    </script>
+
     <!-- login button code -->
     <div class="popup">
         <div class="popup-content">
@@ -132,21 +170,33 @@
     </script>
 
     
-    <section class="container">
-        <h2>
-            Dedicated to provide a bridge between the alumni and their institute.
-        </h2>
-        <p>
+    <section class="container" >
+            <h2>
+                Dedicated to provide a bridge between the alumni and their institute.
+            </h2>
+        <!-- <p>
             Every year thousand of students graduate from BUITEMS, once together like a flock of birds, now, each on their own flying off to their destined future. <br> Our aim is to connect them back.
-        </p>
+        </p> -->
 
     </section>
+   
     <footer>
         <small>&copy; Hello friends</small> 
         <br>
         <a href="mailto:shafai@protonmail.com">Contact us</a>
-      </footer>
-      
+
+        <div class="social-link">
+            <a href="#" class="social-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-btn">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
 
 </body>
 
